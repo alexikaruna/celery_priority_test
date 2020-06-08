@@ -16,7 +16,7 @@ for i in range(10):
 write_to_log('TEST 1: Enqueueing priority task now...')
 test_priority_task.apply_async(('high priority', 1), queue='tasks', priority=1)
 
-#write_to_log('Sleeping 60 seconds to ensure that queue flushes before second test...')
+write_to_log('Sleeping 60 seconds to ensure that queue flushes before second test...')
 time.sleep(60)
 
 # TEST 2 - default task priority
