@@ -23,6 +23,6 @@ time.sleep(60)
 write_to_log('TEST 2: Test that the default priority set (2) holds for unprioritizd tasks, i.e. that setting TASK_DEFAULT_PRIORITY works.')
 write_to_log('TEST 2: Enqueueing 10 low priority tasks now...')
 for i in range(10):
-    test_priority_task.apply_async(('low priority', 'NO PRIORITY', datetime.datetime.now)) # note no actual prior, just the param to the task for logging
+    test_priority_task.apply_async(('low priority', 'NO PRIORITY')) # note no actual prior, just the param to the task for logging
 write_to_log('TEST 2: Enqueueing priority task now...')
 test_priority_task.apply_async(('high priority', 1), queue='tasks', priority=1)

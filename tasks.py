@@ -12,6 +12,7 @@ celeryconfig['CELERY_QUEUES'] = {"tasks": {"exchange": "tasks", "binding_key": "
 celeryconfig['CELERY_DEFAULT_QUEUE'] = "tasks"
 celeryconfig['CELERY_ACKS_LATE'] = True
 celeryconfig['CELERYD_PREFETCH_MULTIPLIER'] = 1
+celeryconfig['CELERYD_MAX_TASKS_PER_CHILD'] = 1
 #celeryconfig['TASK_DEFAULT_PRIORITY'] = 2
 celery_app.config_from_object(celeryconfig)
 
